@@ -2,7 +2,7 @@ install:
 	npm ci
 
 gendiff:
-	npx gendiff.js
+	node gendiff.js
 
 lint:
 	npx eslint .

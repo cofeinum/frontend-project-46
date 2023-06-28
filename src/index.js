@@ -29,7 +29,8 @@ const genDiff = (path1, path2) => {
       ];
     });
 
-  console.log(`{\n  ${result.join('\n  ')}\n}`);
+  //console.log(`{\n  ${result.join('\n  ')}\n}`);
+  return `{\n  ${result.join('\n  ')}\n}`;
 };
 
 export default genDiff;

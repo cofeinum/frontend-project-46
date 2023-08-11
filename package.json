@@ -1,19 +1,22 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/cofeinum/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/cofeinum/frontend-project-46/actions)",
+  "description": "diff files",
+  "author": "l.a.man@ya.ru",
+  "license": "ISC",
   "main": "src/index.js",
-  "scripts": {
-    "test": "node --test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cofeinum/frontend-project-46.git"
   },
-  "author": "l.a.man@ya.ru",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/cofeinum/frontend-project-46/issues"
+  },
+  "simple-git-hooks": {
+    "pre-push": "make lint"
+  },
+  "scripts": {
+    "test": "npx jest"
   },
   "homepage": "https://github.com/cofeinum/frontend-project-46#readme",
   "type": "module",

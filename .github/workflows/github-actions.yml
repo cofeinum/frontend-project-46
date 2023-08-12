@@ -15,10 +15,6 @@ jobs:
     # The type of machine to run the job on
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./server/
-
     strategy:
       # Node versions list
       matrix:
@@ -37,7 +33,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: './server/package-lock.json'
+          cache-dependency-path: ${{github.workspace}}/package-lock.json
       - run: make install
       - run: make lint
       - run: make test

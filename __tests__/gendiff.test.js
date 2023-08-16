@@ -1,8 +1,10 @@
 import genDiff from '../src/index.js';
 
 test('equal', () => {
-  const path1 = './__fixtures__/file1.json';
-  const path2 = './__fixtures__/file2.json';
+  const pathJson1 = './__fixtures__/file1.json';
+  const pathJson2 = './__fixtures__/file2.json';
+  const pathYaml1 = './__fixtures__/file1.yaml';
+  const pathYaml2 = './__fixtures__/file2.yaml';
   const result = `{
   - follow: false
     host: hexlet.io
@@ -12,5 +14,6 @@ test('equal', () => {
   + verbose: true
 }`;
 
-  expect(genDiff(path1, path2)).toEqual(result);
+  expect(genDiff(pathJson1, pathJson2)).toEqual(result);
+  expect(genDiff(pathYaml1, pathYaml2)).toEqual(result);
 });

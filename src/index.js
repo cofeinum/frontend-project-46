@@ -1,11 +1,15 @@
 import readFile from './read-file.js';
+import getParse from './parser.js';
 
 const genDiff = (path1, path2) => {
   const data1 = readFile(path1);
   const data2 = readFile(path2);
 
-  const object1 = JSON.parse(data1);
-  const object2 = JSON.parse(data2);
+  const format1 = path1.split('.').at(-1);
+  const format2 = path2.split('.').at(-1);
+
+  const object1 = getParse(data1, format1);
+  const object2 = getParse(data2, format2);
 
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);

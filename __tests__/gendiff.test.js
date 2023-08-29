@@ -14,6 +14,7 @@ test('equal', () => {
   const pathYaml2 = './__fixtures__/file2.yaml';
   const resultStylish = readFile('test_result_stylish.txt');
   const resultPlain = readFile('test_result_plain.txt');
+  const resultJson = readFile('test_result_json.txt');
 
   expect(genDiff(pathJson1, pathJson2)).toEqual(resultStylish);
   expect(genDiff(pathYaml1, pathYaml2)).toEqual(resultStylish);
@@ -22,4 +23,7 @@ test('equal', () => {
 
   expect(genDiff(pathJson1, pathJson2, 'plain')).toEqual(resultPlain);
   expect(genDiff(pathYaml1, pathYaml2, 'plain')).toEqual(resultPlain);
+
+  expect(genDiff(pathJson1, pathYaml2, 'json')).toEqual(resultJson);
+  expect(genDiff(pathYaml1, pathJson2, 'json')).toEqual(resultJson);
 });

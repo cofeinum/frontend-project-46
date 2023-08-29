@@ -4,9 +4,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/23de5aa02bd1e81f63e7/maintainability)](https://codeclimate.com/github/cofeinum/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/23de5aa02bd1e81f63e7/test_coverage)](https://codeclimate.com/github/cofeinum/frontend-project-46/test_coverage)
 
+
 ### Description
 
 **Gendiff** - is a program that determines the difference between two data structures. Can work with json and yaml/yml files.
+
 
 ### Install
 
@@ -38,11 +40,13 @@ Example:
 gendiff -f plain __fixtures__/file1.json __fixtures__/file2.yaml
 ```
 
+
 ### Run tests
 
 ```bash
 make test
 ```
+
 
 ### Show works and test result:
 

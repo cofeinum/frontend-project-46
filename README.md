@@ -6,7 +6,7 @@
 
 ### Show works and test result:
 
-[![asciicast](https://asciinema.org/a/603146.svg)](https://asciinema.org/a/603146)
+[![asciicast](https://asciinema.org/a/605231.svg)](https://asciinema.org/a/605231)
 
 ## Setup
 

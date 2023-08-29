@@ -35,13 +35,4 @@ const getStylishFormat = (tree, depth = 1) => {
   return ['{', ...result, `${getLastIndent(depth)}}`].join('\n');
 };
 
-const formatTree = (tree, format) => {
-  switch (format) {
-    case 'stylish':
-      return getStylishFormat(tree);
-    default:
-      throw new Error(`Format '${format}' - is incorrect`);
-  }
-};
-
-export default formatTree;
+export default getStylishFormat;

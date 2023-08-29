@@ -12,7 +12,7 @@ program
   .arguments('<filepath1> <filepath2>')
   .helpOption('-v, --version', 'output the version number')
   .helpOption('-h, --help', 'output usage information')
-  .helpOption('-f, --format <type>', 'output format', 'stylish')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .action((filepath1, filepath2) => {
     console.log(gendiff(filepath1, filepath2, program.opts().format));
   });

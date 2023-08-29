@@ -1,9 +1,9 @@
 import readFile from './read-file.js';
 import getParse from './parser.js';
 import getDiffTree from './diff.js';
-import formatTree from './formater.js';
+import formatTree from './formatters/index.js';
 
-const genDiff = (path1, path2, format = 'stylish') => {
+const genDiff = (path1, path2, formatName = 'stylish') => {
   const data1 = readFile(path1);
   const data2 = readFile(path2);
 
@@ -15,7 +15,7 @@ const genDiff = (path1, path2, format = 'stylish') => {
 
   const diffTree = getDiffTree(object1, object2);
 
-  return formatTree(diffTree, format);
+  return formatTree(diffTree, formatName);
 };
 
 export default genDiff;

@@ -33,7 +33,12 @@ By default using 'stylish' output format of difference. For another output forma
 + `plain` - for line-by-line output of the difference
 + `json`  - for json output of the difference
 
-## Run tests
+Example:
+```bash
+gendiff -f plain __fixtures__/file1.json __fixtures__/file2.yaml
+```
+
+### Run tests
 
 ```bash
 make test

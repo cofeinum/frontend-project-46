@@ -29,9 +29,9 @@ gendiff <filepath1>filename1.json <filepath2>filename2.yaml
 where `<filepath>` - absolute or relative file path
 
 By default using 'stylish' output format of difference. For another output format, use the flag `-f` or `--format` with next values:
-`stylish` - using by default
-`plain` - for line-by-line output of the difference
-`json`  - for json output of the difference
++ `stylish` - using by default
++ `plain` - for line-by-line output of the difference
++ `json`  - for json output of the difference
 
 ## Run tests
 

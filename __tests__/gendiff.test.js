@@ -16,6 +16,21 @@ test('equal', () => {
   const resultPlain = readFile('test_result_plain.txt');
   const resultJson = readFile('test_result_json.txt');
 
+  /*
+  test.each(
+    [
+      { name: 'stylish', file: resultStylish },
+      { name: 'plain', file: resultPlain },
+      { name: 'json', file: resultJson },
+    ]
+  )('test 123', (item) => {
+    expect(genDiff(pathJson1, pathJson2, item.name)).toEqual(item.file);
+    expect(genDiff(pathYaml1, pathYaml2, item.name)).toEqual(item.file);
+    expect(genDiff(pathJson1, pathYaml2, item.name)).toEqual(item.file);
+    expect(genDiff(pathYaml1, pathJson2, item.name)).toEqual(item.file);
+  });
+*/
+
   expect(genDiff(pathJson1, pathJson2)).toEqual(resultStylish);
   expect(genDiff(pathYaml1, pathYaml2)).toEqual(resultStylish);
   expect(genDiff(pathJson1, pathYaml2, 'stylish')).toEqual(resultStylish);

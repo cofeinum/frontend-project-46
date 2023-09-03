@@ -1,11 +1,16 @@
+import _ from 'lodash';
+
 const isObject = (val) => (typeof val === 'object' && val !== null);
 
 const getDiffTree = (obj1, obj2) => {
-  const keys1 = Object.keys(obj1);
-  const keys2 = Object.keys(obj2);
-  const diffTree = [...keys1, ...keys2]
-    .filter((value, index, array) => array.indexOf(value) === index)
-    .sort()
+  // const keys1 = Object.keys(obj1);
+  // const keys2 = Object.keys(obj2);
+  // const diffTree = [...keys1, ...keys2]
+  //  .filter((value, index, array) => array.indexOf(value) === index)
+  //  .sort()
+  const keys = _.union(_.keys(obj1), _.keys(obj2));
+  const sortedKeys = _.sortBy(keys);
+  const diffTree = sortedKeys
     .map((key) => {
       if (isObject(obj1[key]) && isObject(obj2[key])) {
         return { key, status: 'nested', val: getDiffTree(obj1[key], obj2[key]) };
